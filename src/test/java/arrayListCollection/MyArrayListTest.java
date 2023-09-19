@@ -49,7 +49,6 @@ public class MyArrayListTest {
         assertTrue(list.isEmpty());
         assertTrue(list.size() == 0);
     }
-    //NullPointerException???
     @Test
     void testSort() {
         List<Integer> list = new MyArrayList<>();
