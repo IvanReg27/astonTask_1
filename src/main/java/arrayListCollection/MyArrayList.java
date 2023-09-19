@@ -63,8 +63,39 @@ public class MyArrayList<E> implements List<E> {
      * without disclosing details of its implementation.
      */
     @Override
-    public Iterator iterator() {
-        return null;
+    public Iterator<E> iterator() {
+        return new MyIterator();
+    }
+
+    /**
+     * Внутренний класс-итератор для перебора элементов массива.
+     */
+    private class MyIterator implements Iterator<E> {
+        private int iteratorIndex = 0;
+
+        /**
+         * Проверяет, есть ли следующий элемент в массиве.
+         *
+         * @return true, если есть следующий элемент, иначе false
+         */
+        @Override
+        public boolean hasNext() {
+            return iteratorIndex < size;
+        }
+
+        /**
+         * Возвращает следующий элемент массива и перемещает указатель на следующую позицию.
+         *
+         * @return следующий элемент массива
+         * @throws NoSuchElementException если достигнут конец массива
+         */
+        @Override
+        public E next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            return get(iteratorIndex++);
+        }
     }
     /**
      * Copies the elements of the ArrayList to a new Object array.
@@ -370,6 +401,82 @@ public class MyArrayList<E> implements List<E> {
             }
         }
         return true;
+    }
+    /**
+     * Converts an object to a string representation.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < size; i++) {
+            sb.append(get(i));
+            if (i != size - 1) {
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+    public void quickSort(E[] array, int left, int right, Comparator<? super E> comparator) {
+        int index = 0;
+        if (array.length > 1) {
+            index = partition(array, left, right, comparator);
+            if (left < index - 1) {
+                quickSort(array, left, index - 1, comparator);
+            }
+            if (index < right) {
+                quickSort(array, index, right, comparator);
+            }
+        }
+    }
+    private int partition(E[] array, int left, int right, Comparator<? super E> comparator) {
+        E half = array[(left + right) / 2];
+        while (left <= right) {
+            while (comparator.compare(array[left], half) < 0) {
+                left++;
+            }
+            while (comparator.compare(array[right], half) > 0) {
+                right--;
+            }
+            if (left <= right) {
+                swap(array, left, right);
+                left++;
+                right--;
+            }
+        }
+        return left;
+    }
+    private void swap(E[] array, int firstIndex, int secondIndex) {
+        E temp = array[firstIndex];
+        array[firstIndex] = array[secondIndex];
+        array[secondIndex] = temp;
+    }
+    /**
+     * Sorts the elements of an array using the specified
+     * comparator using quicksort.
+     */
+    public void sort(Comparator<? super E> comparator) {
+        quickSort((E[]) array, 0, size - 1, comparator);
+    }
+    /**
+     * Increases the capacity of the array if necessary and
+     * copies the elements to a new array.
+     */
+    private void increaseCapacityAndCopyArray(int minCapacity) {
+        if (minCapacity > array.length) {
+            int newCapacity = minCapacity * 3 / 2;
+            array = Arrays.copyOf(array, newCapacity);
+        }
+    }
+    /**
+     * Checks that the specified index is within
+     * the valid bounds of the array.
+     */
+    private void validIndex(int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index out of range: " + index);
+        }
     }
     @SuppressWarnings("unchecked")
     public <T> T[] toArray(T[] a) {

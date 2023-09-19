@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aa54c21-9997-423b-b379-c79e2e8d5738" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arrayListCollection/MyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arrayListCollection/MyArrayListComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arrayListCollection/MyArrayListQuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/arrayListCollection/MyArrayListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arrayListCollection/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arrayListCollection/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/arrayListCollection/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/arrayListCollection/MyArrayListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +19,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -45,13 +40,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MyArrayListTest">
-    <configuration name="MyArrayListComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListComparator" />
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="arrayListCollection" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MyArrayListTest.testSort">
+    <configuration name="MyArrayListQuickSortTest.quickSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="astonTask_1" />
       <extension name="coverage">
         <pattern>
@@ -59,24 +63,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="arrayListCollection" />
+      <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListQuickSortTest" />
+      <option name="METHOD_NAME" value="quickSort" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyArrayListQuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListQuickSort" />
-      <module name="astonTask_1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="arrayListCollection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyArrayListTest.iterator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="astonTask_1" />
       <extension name="coverage">
         <pattern>
@@ -86,16 +81,67 @@
       </extension>
       <option name="PACKAGE_NAME" value="arrayListCollection" />
       <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="iterator" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyArrayListTest.mainSortElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="astonTask_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="arrayListCollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="arrayListCollection" />
+      <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListTest" />
+      <option name="METHOD_NAME" value="mainSortElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyArrayListTest.testIterator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="astonTask_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="arrayListCollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="arrayListCollection" />
+      <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListTest" />
+      <option name="METHOD_NAME" value="testIterator" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyArrayListTest.testSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="astonTask_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="arrayListCollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="arrayListCollection" />
+      <option name="MAIN_CLASS_NAME" value="arrayListCollection.MyArrayListTest" />
+      <option name="METHOD_NAME" value="testSort" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyArrayListTest" />
-        <item itemvalue="Application.MyArrayListQuickSort" />
-        <item itemvalue="Application.MyArrayListComparator" />
+        <item itemvalue="JUnit.MyArrayListTest.testSort" />
+        <item itemvalue="JUnit.MyArrayListQuickSortTest.quickSort" />
+        <item itemvalue="JUnit.MyArrayListTest.iterator" />
+        <item itemvalue="JUnit.MyArrayListTest.testIterator" />
+        <item itemvalue="JUnit.MyArrayListTest.mainSortElement" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +153,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695007969877</updated>
-      <workItem from="1695007971348" duration="2108000" />
+      <workItem from="1695007971348" duration="2905000" />
+      <workItem from="1695010973779" duration="10000" />
+      <workItem from="1695102595679" duration="11646000" />
     </task>
     <servers />
   </component>
