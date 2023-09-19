@@ -418,6 +418,9 @@ public class MyArrayList<E> implements List<E> {
         sb.append("]");
         return sb.toString();
     }
+    /**
+     * Quick sorting of array elements using a given comparator.
+     */
     public void quickSort(E[] array, int left, int right, Comparator<? super E> comparator) {
         int index = 0;
         if (array.length > 1) {
@@ -430,6 +433,11 @@ public class MyArrayList<E> implements List<E> {
             }
         }
     }
+    /**
+     * Splits the array into two parts around
+     * a pivot element and returns the index
+     * of the pivot element.
+     */
     private int partition(E[] array, int left, int right, Comparator<? super E> comparator) {
         E half = array[(left + right) / 2];
         while (left <= right) {
@@ -447,6 +455,9 @@ public class MyArrayList<E> implements List<E> {
         }
         return left;
     }
+    /**
+     * Swaps two elements of an array.
+     */
     private void swap(E[] array, int firstIndex, int secondIndex) {
         E temp = array[firstIndex];
         array[firstIndex] = array[secondIndex];
